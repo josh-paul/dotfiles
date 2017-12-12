@@ -1,0 +1,11 @@
+[user]
+	email = josh.paul@rackspace.com
+	name = Josh Paul
+
+[alias]
+	add-personal-remote = !git remote add personal $(git config --get remote.upstream.url | sed -e 's!:\\(.*\\)/!:josh-paul/!')
+	ru = remote update
+	setup-upstream-w-personal = !git remote rename origin upstream && git add-personal-remote && git ru
+	sync-fork = !git ru && git checkout master && git merge upstream master && git push personal master
+[cola]
+	spellcheck = false
