@@ -9,3 +9,6 @@
 	sync-fork = !git ru && git checkout master && git merge upstream master && git push personal master
 [cola]
 	spellcheck = false
+[core]
+	editor = /usr/bin/vim
+	excludesFile = /Users/joshua.paul/.gitignore_global
